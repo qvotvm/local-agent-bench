@@ -1,0 +1,200 @@
+{"id": "t001", "values": {"launches": 5934}, "status": "ok", "citations": ["2026-10-02/pons/window_counts/launches"]}
+{"id": "t002", "values": {"launches": 2244}, "status": "ok", "citations": ["2026-10-02/long/window_counts/launches"]}
+{"id": "t003", "values": {"buy_eth": 8473.948374287962}, "status": "ok", "citations": ["2026-10-02/pons/curve_flows/buy_eth"]}
+{"id": "t004", "values": {"sell_eth": 7804.4637345411}, "status": "ok", "citations": ["2026-10-02/pons/curve_flows/sell_eth"]}
+{"id": "t005", "values": {"net_eth": 669.4846397468618}, "status": "ok", "citations": ["2026-10-02/pons/curve_flows/net_eth"]}
+{"id": "t006", "values": {"total": 57}, "status": "ok", "citations": ["2026-10-02/pons/graduations/total"]}
+{"id": "t007", "values": {"instant_observed": 11}, "status": "ok", "citations": ["2026-10-02/pons/graduations/instant_observed"]}
+{"id": "t008", "values": {"spentUsd": null}, "status": "incomplete", "citations": []}
+{"id": "t009", "values": {"burnedUsd": null}, "status": "incomplete", "citations": []}
+{"id": "t010", "values": {"burnedTokens": null}, "status": "incomplete", "citations": []}
+{"id": "t011", "values": {"requests": null}, "status": "incomplete", "citations": []}
+{"id": "t012", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-02/quotum/record_rules/bells_held_tier1"]}
+{"id": "t013", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-02/quotum/record_rules/bells_held_tier3"]}
+{"id": "t014", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-02/quotum/record_rules/used_tier1"]}
+{"id": "t015", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-02/quotum/record_rules/used_tier3"]}
+{"id": "t016", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-02/quotum/record_rules/pyre_tier2"]}
+{"id": "t017", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-02/quotum/record_rules/seated_tier2"]}
+{"id": "t018", "values": {"launches": 4354}, "status": "ok", "citations": ["2026-10-03/pons/window_counts/launches"]}
+{"id": "t019", "values": {"launches": 1057}, "status": "ok", "citations": ["2026-10-03/long/window_counts/launches"]}
+{"id": "t020", "values": {"buy_eth": 2821.2712304907304}, "status": "ok", "citations": ["2026-10-03/pons/curve_flows/buy_eth"]}
+{"id": "t021", "values": {"sell_eth": 2579.2885921258044}, "status": "ok", "citations": ["2026-10-03/pons/curve_flows/sell_eth"]}
+{"id": "t022", "values": {"net_eth": 241.98263836492606}, "status": "ok", "citations": ["2026-10-03/pons/curve_flows/net_eth"]}
+{"id": "t023", "values": {"total": 36}, "status": "ok", "citations": ["2026-10-03/pons/graduations/total"]}
+{"id": "t024", "values": {"instant_observed": 11}, "status": "ok", "citations": ["2026-10-03/pons/graduations/instant_observed"]}
+{"id": "t025", "values": {"spentUsd": 2.083}, "status": "ok", "citations": ["2026-10-03/quotum/usage_bells/spentUsd"]}
+{"id": "t026", "values": {"burnedUsd": 86.38925428571429}, "status": "ok", "citations": ["2026-10-03/quotum/usage_bells/burnedUsd"]}
+{"id": "t027", "values": {"burnedTokens": 535132.0337891452}, "status": "ok", "citations": ["2026-10-03/quotum/usage_bells/burnedTokens"]}
+{"id": "t028", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-03/quotum/usage_bells/requests"]}
+{"id": "t029", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-03/quotum/record_rules/bells_held_tier1"]}
+{"id": "t030", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-03/quotum/record_rules/bells_held_tier3"]}
+{"id": "t031", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-03/quotum/record_rules/used_tier1"]}
+{"id": "t032", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-03/quotum/record_rules/used_tier3"]}
+{"id": "t033", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-03/quotum/record_rules/pyre_tier2"]}
+{"id": "t034", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-03/quotum/record_rules/seated_tier2"]}
+{"id": "t035", "values": {"launches": 3953}, "status": "ok", "citations": ["2026-10-04/pons/window_counts/launches"]}
+{"id": "t036", "values": {"launches": 1106}, "status": "ok", "citations": ["2026-10-04/long/window_counts/launches"]}
+{"id": "t037", "values": {"buy_eth": 2002.542934874785}, "status": "ok", "citations": ["2026-10-04/pons/curve_flows/buy_eth"]}
+{"id": "t038", "values": {"sell_eth": 1788.1622312780833}, "status": "ok", "citations": ["2026-10-04/pons/curve_flows/sell_eth"]}
+{"id": "t039", "values": {"net_eth": 214.38070359670178}, "status": "ok", "citations": ["2026-10-04/pons/curve_flows/net_eth"]}
+{"id": "t040", "values": {"total": 32}, "status": "ok", "citations": ["2026-10-04/pons/graduations/total"]}
+{"id": "t041", "values": {"instant_observed": 6}, "status": "ok", "citations": ["2026-10-04/pons/graduations/instant_observed"]}
+{"id": "t042", "values": {"spentUsd": 17.3245}, "status": "ok", "citations": ["2026-10-04/quotum/usage_bells/spentUsd"]}
+{"id": "t043", "values": {"burnedUsd": 232.6941}, "status": "ok", "citations": ["2026-10-04/quotum/usage_bells/burnedUsd"]}
+{"id": "t044", "values": {"burnedTokens": 1573215.97854659}, "status": "ok", "citations": ["2026-10-04/quotum/usage_bells/burnedTokens"]}
+{"id": "t045", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-04/quotum/usage_bells/requests"]}
+{"id": "t046", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-04/quotum/record_rules/bells_held_tier1"]}
+{"id": "t047", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-04/quotum/record_rules/bells_held_tier3"]}
+{"id": "t048", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-04/quotum/record_rules/used_tier1"]}
+{"id": "t049", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-04/quotum/record_rules/used_tier3"]}
+{"id": "t050", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-04/quotum/record_rules/pyre_tier2"]}
+{"id": "t051", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-04/quotum/record_rules/seated_tier2"]}
+{"id": "t052", "values": {"launches": 4555}, "status": "ok", "citations": ["2026-10-05/pons/window_counts/launches"]}
+{"id": "t053", "values": {"launches": 1209}, "status": "ok", "citations": ["2026-10-05/long/window_counts/launches"]}
+{"id": "t054", "values": {"buy_eth": 2378.3871816714354}, "status": "ok", "citations": ["2026-10-05/pons/curve_flows/buy_eth"]}
+{"id": "t055", "values": {"sell_eth": 2142.041158716688}, "status": "ok", "citations": ["2026-10-05/pons/curve_flows/sell_eth"]}
+{"id": "t056", "values": {"net_eth": 236.34602295474724}, "status": "ok", "citations": ["2026-10-05/pons/curve_flows/net_eth"]}
+{"id": "t057", "values": {"total": 32}, "status": "ok", "citations": ["2026-10-05/pons/graduations/total"]}
+{"id": "t058", "values": {"instant_observed": 10}, "status": "ok", "citations": ["2026-10-05/pons/graduations/instant_observed"]}
+{"id": "t059", "values": {"spentUsd": 54.9558}, "status": "ok", "citations": ["2026-10-05/quotum/usage_bells/spentUsd"]}
+{"id": "t060", "values": {"burnedUsd": 295.0442}, "status": "ok", "citations": ["2026-10-05/quotum/usage_bells/burnedUsd"]}
+{"id": "t061", "values": {"burnedTokens": 9595437.394515775}, "status": "ok", "citations": ["2026-10-05/quotum/usage_bells/burnedTokens"]}
+{"id": "t062", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-05/quotum/usage_bells/requests"]}
+{"id": "t063", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-05/quotum/record_rules/bells_held_tier1"]}
+{"id": "t064", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-05/quotum/record_rules/bells_held_tier3"]}
+{"id": "t065", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-05/quotum/record_rules/used_tier1"]}
+{"id": "t066", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-05/quotum/record_rules/used_tier3"]}
+{"id": "t067", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-05/quotum/record_rules/pyre_tier2"]}
+{"id": "t068", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-05/quotum/record_rules/seated_tier2"]}
+{"id": "t069", "values": {"launches": 3524}, "status": "ok", "citations": ["2026-10-06/pons/window_counts/launches"]}
+{"id": "t070", "values": {"launches": 1395}, "status": "ok", "citations": ["2026-10-06/long/window_counts/launches"]}
+{"id": "t071", "values": {"buy_eth": 1907.7507795562435}, "status": "ok", "citations": ["2026-10-06/pons/curve_flows/buy_eth"]}
+{"id": "t072", "values": {"sell_eth": 1735.0995806346282}, "status": "ok", "citations": ["2026-10-06/pons/curve_flows/sell_eth"]}
+{"id": "t073", "values": {"net_eth": 172.65119892161533}, "status": "ok", "citations": ["2026-10-06/pons/curve_flows/net_eth"]}
+{"id": "t074", "values": {"total": 23}, "status": "ok", "citations": ["2026-10-06/pons/graduations/total"]}
+{"id": "t075", "values": {"instant_observed": 6}, "status": "ok", "citations": ["2026-10-06/pons/graduations/instant_observed"]}
+{"id": "t076", "values": {"spentUsd": 56.3846}, "status": "ok", "citations": ["2026-10-06/quotum/usage_bells/spentUsd"]}
+{"id": "t077", "values": {"burnedUsd": 456.5211245714286}, "status": "ok", "citations": ["2026-10-06/quotum/usage_bells/burnedUsd"]}
+{"id": "t078", "values": {"burnedTokens": 10095588.428439831}, "status": "ok", "citations": ["2026-10-06/quotum/usage_bells/burnedTokens"]}
+{"id": "t079", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-06/quotum/usage_bells/requests"]}
+{"id": "t080", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-06/quotum/record_rules/bells_held_tier1"]}
+{"id": "t081", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-06/quotum/record_rules/bells_held_tier3"]}
+{"id": "t082", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-06/quotum/record_rules/used_tier1"]}
+{"id": "t083", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-06/quotum/record_rules/used_tier3"]}
+{"id": "t084", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-06/quotum/record_rules/pyre_tier2"]}
+{"id": "t085", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-06/quotum/record_rules/seated_tier2"]}
+{"id": "t086", "values": {"launches": 2855}, "status": "ok", "citations": ["2026-10-07/pons/window_counts/launches"]}
+{"id": "t087", "values": {"launches": 1182}, "status": "ok", "citations": ["2026-10-07/long/window_counts/launches"]}
+{"id": "t088", "values": {"buy_eth": 1601.5193860271065}, "status": "ok", "citations": ["2026-10-07/pons/curve_flows/buy_eth"]}
+{"id": "t089", "values": {"sell_eth": 1439.5773513092943}, "status": "ok", "citations": ["2026-10-07/pons/curve_flows/sell_eth"]}
+{"id": "t090", "values": {"net_eth": 161.94203471781225}, "status": "ok", "citations": ["2026-10-07/pons/curve_flows/net_eth"]}
+{"id": "t091", "values": {"total": 26}, "status": "ok", "citations": ["2026-10-07/pons/graduations/total"]}
+{"id": "t092", "values": {"instant_observed": 11}, "status": "ok", "citations": ["2026-10-07/pons/graduations/instant_observed"]}
+{"id": "t093", "values": {"spentUsd": 96.1603}, "status": "ok", "citations": ["2026-10-07/quotum/usage_bells/spentUsd"]}
+{"id": "t094", "values": {"burnedUsd": 70.06465283333333}, "status": "ok", "citations": ["2026-10-07/quotum/usage_bells/burnedUsd"]}
+{"id": "t095", "values": {"burnedTokens": 919662.447310605}, "status": "ok", "citations": ["2026-10-07/quotum/usage_bells/burnedTokens"]}
+{"id": "t096", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-07/quotum/usage_bells/requests"]}
+{"id": "t097", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-07/quotum/record_rules/bells_held_tier1"]}
+{"id": "t098", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-07/quotum/record_rules/bells_held_tier3"]}
+{"id": "t099", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-07/quotum/record_rules/used_tier1"]}
+{"id": "t100", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-07/quotum/record_rules/used_tier3"]}
+{"id": "t101", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-08/quotum/usage_bells/requests"]}
+{"id": "t102", "values": {"tokensIn": null}, "status": "incomplete", "citations": ["2026-10-08/quotum/usage_bells/tokensIn"]}
+{"id": "t103", "values": {"tokensOut": null}, "status": "incomplete", "citations": ["2026-10-08/quotum/usage_bells/tokensOut"]}
+{"id": "t104", "values": {"real": null}, "status": "incomplete", "citations": ["2026-10-08/pons/graduations/real"]}
+{"id": "t105", "values": {"buy_eth": 1240.085565472824, "sell_eth": 1130.691341324805, "net_eth": 109.39422414801902}, "status": "incomplete", "citations": ["2026-10-08/pons/curve_flows/buy_eth", "2026-10-08/pons/curve_flows/net_eth", "2026-10-08/pons/curve_flows/sell_eth"]}
+{"id": "t106", "values": {"pons_launches": 2299, "long_launches": 1222}, "status": "ok", "citations": ["2026-10-08/pons/window_counts/launches", "2026-10-08/long/window_counts/launches"]}
+{"id": "t107", "values": {"launches": 2299}, "status": "stale", "citations": ["2026-10-08/pons/window_counts/launches"]}
+{"id": "t108", "values": {"spentUsd": 107.4625}, "status": "refuse", "citations": ["2026-10-08/quotum/usage_bells/spentUsd"]}
+{"id": "t109", "values": {"launches": 2299}, "status": "refuse", "citations": ["2026-10-08/pons/window_counts/launches"]}
+{"id": "t110", "values": {"buy_eth": 1240.085565472824, "net_eth": 109.39422414801902}, "status": "ok", "citations": ["2026-10-08/pons/curve_flows/buy_eth", "2026-10-08/pons/curve_flows/net_eth"]}
+{"id": "t111", "values": {"burnedTokens": 2206219.813015405, "tokensIn": null}, "status": "incomplete", "citations": ["2026-10-08/quotum/usage_bells/burnedTokens", "2026-10-08/quotum/usage_bells/tokensIn"]}
+{"id": "t112", "values": {"total": 18, "real": null}, "status": "incomplete", "citations": ["2026-10-08/pons/graduations/real", "2026-10-08/pons/graduations/total"]}
+{"id": "t113", "values": {"used_tier1": 100}, "status": "incomplete", "citations": ["2026-10-08/quotum/record_rules/used_tier1"]}
+{"id": "t114", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-09/quotum/usage_bells/requests"]}
+{"id": "t115", "values": {"tokensIn": null}, "status": "incomplete", "citations": ["2026-10-09/quotum/usage_bells/tokensIn"]}
+{"id": "t116", "values": {"tokensOut": null}, "status": "incomplete", "citations": ["2026-10-09/quotum/usage_bells/tokensOut"]}
+{"id": "t117", "values": {"real": null}, "status": "incomplete", "citations": ["2026-10-09/pons/graduations/real"]}
+{"id": "t118", "values": {"buy_eth": 1212.3873550664364, "sell_eth": 1075.1734034506947, "net_eth": 137.21395161574173}, "status": "incomplete", "citations": ["2026-10-09/pons/curve_flows/buy_eth", "2026-10-09/pons/curve_flows/net_eth", "2026-10-09/pons/curve_flows/sell_eth"]}
+{"id": "t119", "values": {"pons_launches": 2332, "long_launches": 824}, "status": "ok", "citations": ["2026-10-09/pons/window_counts/launches", "2026-10-09/long/window_counts/launches"]}
+{"id": "t120", "values": {"launches": 2332}, "status": "stale", "citations": ["2026-10-09/pons/window_counts/launches"]}
+{"id": "t121", "values": {"spentUsd": 66.5042}, "status": "refuse", "citations": ["2026-10-09/quotum/usage_bells/spentUsd"]}
+{"id": "t122", "values": {"launches": 2332}, "status": "refuse", "citations": ["2026-10-09/pons/window_counts/launches"]}
+{"id": "t123", "values": {"buy_eth": 1212.3873550664364, "net_eth": 137.21395161574173}, "status": "ok", "citations": ["2026-10-09/pons/curve_flows/buy_eth", "2026-10-09/pons/curve_flows/net_eth"]}
+{"id": "t124", "values": {"burnedTokens": 735117.7691423161, "tokensIn": null}, "status": "incomplete", "citations": ["2026-10-09/quotum/usage_bells/burnedTokens", "2026-10-09/quotum/usage_bells/tokensIn"]}
+{"id": "t125", "values": {"total": 25, "real": null}, "status": "incomplete", "citations": ["2026-10-09/pons/graduations/real", "2026-10-09/pons/graduations/total"]}
+{"id": "t126", "values": {"used_tier1": 100}, "status": "incomplete", "citations": ["2026-10-09/quotum/record_rules/used_tier1"]}
+{"id": "t127", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-10/quotum/usage_bells/requests"]}
+{"id": "t128", "values": {"tokensIn": null}, "status": "incomplete", "citations": ["2026-10-10/quotum/usage_bells/tokensIn"]}
+{"id": "t129", "values": {"tokensOut": null}, "status": "incomplete", "citations": ["2026-10-10/quotum/usage_bells/tokensOut"]}
+{"id": "t130", "values": {"real": null}, "status": "incomplete", "citations": ["2026-10-10/pons/graduations/real"]}
+{"id": "t131", "values": {"buy_eth": 1168.9437937000694, "sell_eth": 1037.6650783990372, "net_eth": 131.2787153010322}, "status": "incomplete", "citations": ["2026-10-10/pons/curve_flows/buy_eth", "2026-10-10/pons/curve_flows/net_eth", "2026-10-10/pons/curve_flows/sell_eth"]}
+{"id": "t132", "values": {"pons_launches": 2331, "long_launches": 915}, "status": "ok", "citations": ["2026-10-10/pons/window_counts/launches", "2026-10-10/long/window_counts/launches"]}
+{"id": "t133", "values": {"launches": 2331}, "status": "stale", "citations": ["2026-10-10/pons/window_counts/launches"]}
+{"id": "t134", "values": {"spentUsd": 97.4123}, "status": "refuse", "citations": ["2026-10-10/quotum/usage_bells/spentUsd"]}
+{"id": "t135", "values": {"launches": 2331}, "status": "refuse", "citations": ["2026-10-10/pons/window_counts/launches"]}
+{"id": "t136", "values": {"buy_eth": 1168.9437937000694, "net_eth": 131.2787153010322}, "status": "ok", "citations": ["2026-10-10/pons/curve_flows/buy_eth", "2026-10-10/pons/curve_flows/net_eth"]}
+{"id": "t137", "values": {"burnedTokens": 1137139.7362718736, "tokensIn": null}, "status": "incomplete", "citations": ["2026-10-10/quotum/usage_bells/burnedTokens", "2026-10-10/quotum/usage_bells/tokensIn"]}
+{"id": "t138", "values": {"total": 18, "real": null}, "status": "incomplete", "citations": ["2026-10-10/pons/graduations/real", "2026-10-10/pons/graduations/total"]}
+{"id": "t139", "values": {"used_tier1": 100}, "status": "incomplete", "citations": ["2026-10-10/quotum/record_rules/used_tier1"]}
+{"id": "t140", "values": {"requests": null}, "status": "incomplete", "citations": ["2026-10-11/quotum/usage_bells/requests"]}
+{"id": "t141", "values": {"tokensIn": null}, "status": "incomplete", "citations": ["2026-10-11/quotum/usage_bells/tokensIn"]}
+{"id": "t142", "values": {"tokensOut": null}, "status": "incomplete", "citations": ["2026-10-11/quotum/usage_bells/tokensOut"]}
+{"id": "t143", "values": {"real": null}, "status": "incomplete", "citations": ["2026-10-11/pons/graduations/real"]}
+{"id": "t144", "values": {"buy_eth": 880.684949996283, "sell_eth": 801.0804172620296, "net_eth": 79.60453273425333}, "status": "incomplete", "citations": ["2026-10-11/pons/curve_flows/buy_eth", "2026-10-11/pons/curve_flows/net_eth", "2026-10-11/pons/curve_flows/sell_eth"]}
+{"id": "t145", "values": {"pons_launches": 1724, "long_launches": 750}, "status": "ok", "citations": ["2026-10-11/pons/window_counts/launches", "2026-10-11/long/window_counts/launches"]}
+{"id": "t146", "values": {"launches": 1724}, "status": "stale", "citations": ["2026-10-11/pons/window_counts/launches"]}
+{"id": "t147", "values": {"spentUsd": 26.6833}, "status": "refuse", "citations": ["2026-10-11/quotum/usage_bells/spentUsd"]}
+{"id": "t148", "values": {"launches": 1724}, "status": "refuse", "citations": ["2026-10-11/pons/window_counts/launches"]}
+{"id": "t149", "values": {"launches": null}, "status": "after_cutoff", "citations": []}
+{"id": "t150", "values": {"launches": null}, "status": "incomplete", "citations": []}
+{"id": "t151", "values": {"launches": 2261}, "status": "ok", "citations": ["2026-10-12/pons/window_counts/launches"]}
+{"id": "t152", "values": {"launches": 959}, "status": "ok", "citations": ["2026-10-12/long/window_counts/launches"]}
+{"id": "t153", "values": {"buy_eth": 1621.6901058662238, "sell_eth": 1439.7535414262015, "net_eth": 181.93656444002227}, "status": "ok", "citations": ["2026-10-12/pons/curve_flows/buy_eth", "2026-10-12/pons/curve_flows/net_eth", "2026-10-12/pons/curve_flows/sell_eth"]}
+{"id": "t154", "values": {"total": 34, "real": null}, "status": "incomplete", "citations": ["2026-10-12/pons/graduations/real", "2026-10-12/pons/graduations/total"]}
+{"id": "t155", "values": {"spentUsd": 30.9228}, "status": "ok", "citations": ["2026-10-12/quotum/usage_bells/spentUsd"]}
+{"id": "t156", "values": {"burnedUsd": 43.86092299999999, "spentUsd": 30.9228}, "status": "ok", "citations": ["2026-10-12/quotum/usage_bells/burnedUsd", "2026-10-12/quotum/usage_bells/spentUsd"]}
+{"id": "t157", "values": {"burnedTokens": 647455.6342768059, "tokensIn": null}, "status": "incomplete", "citations": ["2026-10-12/quotum/usage_bells/burnedTokens", "2026-10-12/quotum/usage_bells/tokensIn"]}
+{"id": "t158", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-12/quotum/record_rules/bells_held_tier1"]}
+{"id": "t159", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-12/quotum/record_rules/bells_held_tier3"]}
+{"id": "t160", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-12/quotum/record_rules/used_tier1"]}
+{"id": "t161", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-12/quotum/record_rules/used_tier3"]}
+{"id": "t162", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-12/quotum/record_rules/pyre_tier2"]}
+{"id": "t163", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-12/quotum/record_rules/seated_tier2"]}
+{"id": "t164", "values": {"launches": 1561}, "status": "ok", "citations": ["2026-10-13/pons/window_counts/launches"]}
+{"id": "t165", "values": {"launches": 1100}, "status": "ok", "citations": ["2026-10-13/long/window_counts/launches"]}
+{"id": "t166", "values": {"buy_eth": 917.7078378544982, "sell_eth": 804.8008865367168, "net_eth": 112.90695131778136}, "status": "ok", "citations": ["2026-10-13/pons/curve_flows/buy_eth", "2026-10-13/pons/curve_flows/net_eth", "2026-10-13/pons/curve_flows/sell_eth"]}
+{"id": "t167", "values": {"total": 19, "real": null}, "status": "incomplete", "citations": ["2026-10-13/pons/graduations/real", "2026-10-13/pons/graduations/total"]}
+{"id": "t168", "values": {"spentUsd": 24.7932}, "status": "ok", "citations": ["2026-10-13/quotum/usage_bells/spentUsd"]}
+{"id": "t169", "values": {"burnedUsd": 25.827925, "spentUsd": 24.7932}, "status": "ok", "citations": ["2026-10-13/quotum/usage_bells/burnedUsd", "2026-10-13/quotum/usage_bells/spentUsd"]}
+{"id": "t170", "values": {"burnedTokens": 412142.45504722185, "tokensIn": null}, "status": "incomplete", "citations": ["2026-10-13/quotum/usage_bells/burnedTokens", "2026-10-13/quotum/usage_bells/tokensIn"]}
+{"id": "t171", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-13/quotum/record_rules/bells_held_tier1"]}
+{"id": "t172", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-13/quotum/record_rules/bells_held_tier3"]}
+{"id": "t173", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-13/quotum/record_rules/used_tier1"]}
+{"id": "t174", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-13/quotum/record_rules/used_tier3"]}
+{"id": "t175", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-13/quotum/record_rules/pyre_tier2"]}
+{"id": "t176", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-13/quotum/record_rules/seated_tier2"]}
+{"id": "t177", "values": {"launches": 1901}, "status": "ok", "citations": ["2026-10-14/pons/window_counts/launches"]}
+{"id": "t178", "values": {"launches": 1432}, "status": "ok", "citations": ["2026-10-14/long/window_counts/launches"]}
+{"id": "t179", "values": {"buy_eth": 1216.225868881438, "sell_eth": 1106.4003994098603, "net_eth": 109.82546947157766}, "status": "ok", "citations": ["2026-10-14/pons/curve_flows/buy_eth", "2026-10-14/pons/curve_flows/net_eth", "2026-10-14/pons/curve_flows/sell_eth"]}
+{"id": "t180", "values": {"total": 14, "real": null}, "status": "incomplete", "citations": ["2026-10-14/pons/graduations/real", "2026-10-14/pons/graduations/total"]}
+{"id": "t181", "values": {"spentUsd": 21.5348}, "status": "ok", "citations": ["2026-10-14/quotum/usage_bells/spentUsd"]}
+{"id": "t182", "values": {"burnedUsd": 42.277895642857146, "spentUsd": 21.5348}, "status": "ok", "citations": ["2026-10-14/quotum/usage_bells/burnedUsd", "2026-10-14/quotum/usage_bells/spentUsd"]}
+{"id": "t183", "values": {"burnedTokens": 753411.8619245733, "tokensIn": null}, "status": "incomplete", "citations": ["2026-10-14/quotum/usage_bells/burnedTokens", "2026-10-14/quotum/usage_bells/tokensIn"]}
+{"id": "t184", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-14/quotum/record_rules/bells_held_tier1"]}
+{"id": "t185", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-14/quotum/record_rules/bells_held_tier3"]}
+{"id": "t186", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-14/quotum/record_rules/used_tier1"]}
+{"id": "t187", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-14/quotum/record_rules/used_tier3"]}
+{"id": "t188", "values": {"pyre_tier2": 1000000}, "status": "ok", "citations": ["2026-10-14/quotum/record_rules/pyre_tier2"]}
+{"id": "t189", "values": {"seated_tier2": 7}, "status": "ok", "citations": ["2026-10-14/quotum/record_rules/seated_tier2"]}
+{"id": "t190", "values": {"launches": 1672}, "status": "ok", "citations": ["2026-10-15/pons/window_counts/launches"]}
+{"id": "t191", "values": {"launches": 1684}, "status": "ok", "citations": ["2026-10-15/long/window_counts/launches"]}
+{"id": "t192", "values": {"buy_eth": 1144.9845433970088, "sell_eth": 1036.0295791358099, "net_eth": 108.95496426119894}, "status": "ok", "citations": ["2026-10-15/pons/curve_flows/buy_eth", "2026-10-15/pons/curve_flows/net_eth", "2026-10-15/pons/curve_flows/sell_eth"]}
+{"id": "t193", "values": {"total": 16, "real": null}, "status": "incomplete", "citations": ["2026-10-15/pons/graduations/real", "2026-10-15/pons/graduations/total"]}
+{"id": "t194", "values": {"spentUsd": 17.4917}, "status": "ok", "citations": ["2026-10-15/quotum/usage_bells/spentUsd"]}
+{"id": "t195", "values": {"burnedUsd": 28.258476, "spentUsd": 17.4917}, "status": "ok", "citations": ["2026-10-15/quotum/usage_bells/burnedUsd", "2026-10-15/quotum/usage_bells/spentUsd"]}
+{"id": "t196", "values": {"burnedTokens": 396298.86279757274, "tokensIn": null}, "status": "incomplete", "citations": ["2026-10-15/quotum/usage_bells/burnedTokens", "2026-10-15/quotum/usage_bells/tokensIn"]}
+{"id": "t197", "values": {"bells_held_tier1": 3}, "status": "ok", "citations": ["2026-10-15/quotum/record_rules/bells_held_tier1"]}
+{"id": "t198", "values": {"bells_held_tier3": 30}, "status": "ok", "citations": ["2026-10-15/quotum/record_rules/bells_held_tier3"]}
+{"id": "t199", "values": {"used_tier1": 100}, "status": "ok", "citations": ["2026-10-15/quotum/record_rules/used_tier1"]}
+{"id": "t200", "values": {"used_tier3": 10000}, "status": "ok", "citations": ["2026-10-15/quotum/record_rules/used_tier3"]}
