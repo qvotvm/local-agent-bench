@@ -51,7 +51,7 @@ details in [docs/methodology.md](docs/methodology.md).
 ## run the scorer
 
 ```
-git clone https://github.com/quotumorg/local-agent-bench
+git clone https://github.com/qvotvm/local-agent-bench
 cd local-agent-bench
 python3 scorer/score.py --tasks examples/tasks.jsonl --gold examples/gold.jsonl --answers examples/answers.jsonl
 ```

@@ -5,8 +5,8 @@ authors:
   - name: quotum
 version: 0.1.0
 date-released: 2026-11-13
-url: "https://github.com/quotumorg/local-agent-bench"
-repository-code: "https://github.com/quotumorg/local-agent-bench"
+url: "https://github.com/qvotvm/local-agent-bench"
+repository-code: "https://github.com/qvotvm/local-agent-bench"
 license: MIT
 keywords:
   - llm-benchmark
