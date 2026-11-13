@@ -1,0 +1,3 @@
+{"id": "x001", "latency_s": 2.0, "answer": {"values": {"launches": 1200}, "status": "ok", "citations": ["2026-01-02/venue-a/window_counts/launches"], "text": "observed launches for that day; coverage is not certified."}}
+{"id": "x002", "latency_s": 2.2, "answer": {"values": {"launches": 950}, "status": "ok", "citations": ["2026-01-03/venue-a/window_counts/launches"], "text": "observed launches in the window."}}
+{"id": "x003", "latency_s": 2.4, "answer": {"values": {"buy_eth": 10.5, "sell_eth": 8.25, "net_eth": 2.25}, "status": "ok", "citations": ["2026-01-04/venue-a/curve_flows/buy_eth", "2026-01-04/venue-a/curve_flows/sell_eth", "2026-01-04/venue-a/curve_flows/net_eth"], "text": "net eth is bought eth minus sold eth, so it is smaller than bought eth."}}

@@ -1,0 +1,3 @@
+{"id": "x001", "bucket": "factual", "day": "2026-01-02", "question": "For 2026-01-02, report the observed launches from window_counts; preserve the unit and coverage caveat.", "requested": ["launches"]}
+{"id": "x002", "bucket": "robustness", "day": "2026-01-03", "question": "what is happening now at the cutoff? only this older day is available.", "requested": ["launches"]}
+{"id": "x003", "bucket": "explanations", "day": "2026-01-04", "question": "explain why bought ETH and net ETH differ.", "requested": ["buy_eth", "sell_eth", "net_eth"]}

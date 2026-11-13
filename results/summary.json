@@ -1,0 +1,204 @@
+{
+  "benchmark": "local-agent-bench v0.1",
+  "run_date": "2026-10-16",
+  "self_run": true,
+  "rounding": "latency seconds to 3 decimals; API USD to 2; bootstrap endpoints to 4",
+  "invented_structured_definition": "historical scorer flag for any value mismatch or unsupported citation, including rounding and null abstentions; not a hallucination count",
+  "scorer": "scorer/score.py (structured fields); explanations graded by rubric, see docs/contested.md",
+  "models": {
+    "qwen3-8b-mlx-4bit": {
+      "structured": {
+        "factual": {
+          "n": 100,
+          "numeric": 100,
+          "citations": 100,
+          "status": 95,
+          "accepted": 95,
+          "invented_structured": 0,
+          "privacy_pattern": 0,
+          "p50_s": 2.089,
+          "p95_s": 2.574
+        },
+        "robustness": {
+          "n": 50,
+          "numeric": 49,
+          "citations": 47,
+          "status": 37,
+          "accepted": 33,
+          "invented_structured": 1,
+          "privacy_pattern": 0,
+          "p50_s": 2.131,
+          "p95_s": 5.185
+        },
+        "explanations": {
+          "n": 50,
+          "numeric": 48,
+          "citations": 50,
+          "status": 28,
+          "accepted": 26,
+          "invented_structured": 2,
+          "privacy_pattern": 0,
+          "p50_s": 2.38,
+          "p95_s": 5.383
+        },
+        "all": {
+          "n": 200,
+          "numeric": 197,
+          "citations": 197,
+          "status": 160,
+          "accepted": 154,
+          "invented_structured": 3,
+          "privacy_pattern": 0,
+          "p50_s": 2.123,
+          "p95_s": 3.822
+        }
+      },
+      "explanations_substantive": {
+        "pass": 19,
+        "n": 50
+      },
+      "api_cost_usd": 0
+    },
+    "claude-opus-5-5": {
+      "structured": {
+        "factual": {
+          "n": 100,
+          "numeric": 100,
+          "citations": 100,
+          "status": 100,
+          "accepted": 100,
+          "invented_structured": 0,
+          "privacy_pattern": 0,
+          "p50_s": 6.478,
+          "p95_s": 8.243
+        },
+        "robustness": {
+          "n": 50,
+          "numeric": 39,
+          "citations": 45,
+          "status": 46,
+          "accepted": 35,
+          "invented_structured": 11,
+          "privacy_pattern": 0,
+          "p50_s": 5.653,
+          "p95_s": 7.258
+        },
+        "explanations": {
+          "n": 50,
+          "numeric": 50,
+          "citations": 50,
+          "status": 46,
+          "accepted": 46,
+          "invented_structured": 0,
+          "privacy_pattern": 0,
+          "p50_s": 6.385,
+          "p95_s": 11.06
+        },
+        "all": {
+          "n": 200,
+          "numeric": 189,
+          "citations": 195,
+          "status": 192,
+          "accepted": 181,
+          "invented_structured": 11,
+          "privacy_pattern": 0,
+          "p50_s": 6.375,
+          "p95_s": 8.613
+        }
+      },
+      "explanations_substantive": {
+        "pass": 36,
+        "n": 50
+      },
+      "api_cost_usd": 1.64
+    },
+    "sql-formatter-baseline": {
+      "structured": {
+        "factual": {
+          "n": 100,
+          "numeric": 100,
+          "citations": 100,
+          "status": 100,
+          "accepted": 100,
+          "invented_structured": 0,
+          "privacy_pattern": 0,
+          "p50_s": 0.001,
+          "p95_s": 0.001
+        },
+        "robustness": {
+          "n": 50,
+          "numeric": 50,
+          "citations": 50,
+          "status": 50,
+          "accepted": 50,
+          "invented_structured": 0,
+          "privacy_pattern": 0,
+          "p50_s": 0.0,
+          "p95_s": 0.002
+        },
+        "explanations": {
+          "n": 50,
+          "numeric": 50,
+          "citations": 50,
+          "status": 50,
+          "accepted": 50,
+          "invented_structured": 0,
+          "privacy_pattern": 0,
+          "p50_s": 0.0,
+          "p95_s": 0.0
+        },
+        "all": {
+          "n": 200,
+          "numeric": 200,
+          "citations": 200,
+          "status": 200,
+          "accepted": 200,
+          "invented_structured": 0,
+          "privacy_pattern": 0,
+          "p50_s": 0.0,
+          "p95_s": 0.001
+        }
+      },
+      "explanations_substantive": {
+        "pass": 0,
+        "n": 50
+      },
+      "api_cost_usd": 0
+    }
+  },
+  "paired_difference_complete_answers_qwen_minus_opus": {
+    "factual": {
+      "diff": -0.05,
+      "day_bootstrap95": [
+        -0.0625,
+        -0.0294
+      ],
+      "day_clusters": 6
+    },
+    "robustness": {
+      "diff": -0.04,
+      "day_bootstrap95": [
+        -0.119,
+        0.0588
+      ],
+      "day_clusters": 6
+    },
+    "explanations": {
+      "diff": -0.4,
+      "day_bootstrap95": [
+        -0.4615,
+        -0.3261
+      ],
+      "day_clusters": 4
+    },
+    "all": {
+      "diff": -0.135,
+      "day_bootstrap95": [
+        -0.2283,
+        -0.0594
+      ],
+      "day_clusters": 16
+    }
+  },
+  "note": "exploratory: small dependent day count, not a superiority or equivalence claim"
+}
