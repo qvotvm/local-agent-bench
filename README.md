@@ -4,6 +4,8 @@ a 200-task Robinhood Chain benchmark: stock Qwen3-8B local vs Claude Opus 5.5
 
 ![tasks](https://img.shields.io/badge/tasks-200-555) ![self-run](https://img.shields.io/badge/self--run-own%20scorer-555) ![license](https://img.shields.io/badge/license-MIT-555)
 
+![results: stock Qwen3-8B local vs Claude Opus 5.5 on 200 Robinhood Chain tasks](assets/results.png)
+
 on the 100 factual tasks, an 8B model running locally on a Mac matched Opus 5.5 on numeric fields and citations. across all tasks it scored lower on judgement: 154 vs 181 complete answers, 19 vs 36 explanations passing the rubric. both models got the same frozen retrieval context for every task. self-run, scored by our own scorer, one run per model. what is contested is in [docs/contested.md](docs/contested.md).
 
 | 200 tasks | Qwen3-8B, local, 4-bit | Claude Opus 5.5, cloud |
@@ -33,6 +35,7 @@ examples/               three synthetic tasks in the benchmark format
 results/summary.json    saved per-group scores for both models and a SQL baseline
 docs/methodology.md     data, tasks, models, hardware, scoring
 docs/contested.md       scoring decisions a reader could make differently
+assets/results.png      the results table as an image
 data/                   tasks, gold and answers, coming in v0.2
 ```
 
