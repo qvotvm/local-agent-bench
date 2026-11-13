@@ -31,12 +31,14 @@ full write-up: [docs/local-models-for-agents.md](docs/local-models-for-agents.md
 
 ```
 scorer/score.py         structured scorer, python 3, no dependencies
+scorer/run.py           runs the 200 prompts against any OpenAI-compatible server
+data/                   tasks, gold, prompts, saved answers and per-task grading
 examples/               three synthetic tasks in the benchmark format
 results/summary.json    saved per-group scores for both models and a SQL baseline
+results/community/      result files from community runs
 docs/methodology.md     data, tasks, models, hardware, scoring
 docs/contested.md       scoring decisions a reader could make differently
 assets/results.png      the results table as an image
-data/                   tasks, gold and answers, coming in v0.2
 ```
 
 ## setup
@@ -53,12 +55,28 @@ details in [docs/methodology.md](docs/methodology.md).
 ```
 git clone https://github.com/qvotvm/local-agent-bench
 cd local-agent-bench
-python3 scorer/score.py --tasks examples/tasks.jsonl --gold examples/gold.jsonl --answers examples/answers.jsonl
+python3 scorer/score.py --tasks data/tasks.jsonl --gold data/gold.jsonl --answers data/answers/qwen3-8b-mlx-4bit.jsonl
 ```
 
-the examples are synthetic. two of three score as complete; the stale-data example fails status on purpose.
+this reproduces the four structured rows and the latency statistics from the saved answers. swap in `claude-opus-5-5.jsonl` or `sql-formatter-baseline.jsonl` for the other rows. explanation grades and API cost come from separate records and are not rescored. the scorer does not rerun inference. file formats are in [data/README.md](data/README.md).
 
-v0.1 does not reproduce the table. the 200 tasks, gold answers, retrieval contexts, prompts and both models' saved answers are planned for v0.2 after a privacy pass. with them, the scorer reproduces the four structured rows and latency statistics. explanation grades and API cost require separate records. `results/summary.json` contains rounded aggregates, not the raw run records. the scorer does not rerun inference.
+[examples/](examples/) holds three synthetic tasks: two score as complete, the stale-data one fails status on purpose.
+
+## run your model
+
+```
+ollama pull qwen3.5:9b
+python3 scorer/run.py --base-url http://localhost:11434/v1 --model qwen3.5:9b --out runs/qwen3.5-9b.jsonl
+```
+
+any OpenAI-compatible server works: ollama, llama.cpp, LM Studio, vLLM, `mlx_lm.server`. python standard library only. to add your result to the community table, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## community results
+
+none yet. structured scores only, self-reported hardware, rescored by us from the linked answers before a row goes in.
+
+| model | quant | runtime | hardware | complete | numeric | citations | status | p50 |
+|---|---|---|---|---:|---:|---:|---:|---:|
 
 ## limits
 

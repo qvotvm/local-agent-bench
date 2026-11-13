@@ -14,9 +14,7 @@ local-agent-bench v0.2 contains the frozen inputs and saved outputs for 200 task
 
 an answer contains `values`, `status`, `citations`, and `text`. the last row for an id is scored. all seven failed Opus attempts were followed by successful answers; they do not contribute latency to the published scores. raw responses and provider diagnostics, costs, tool counts, and token counts are omitted from saved historical answers. the SQL formatter's prose is a neutral fixed template; its saved timings are retained, not regenerated.
 
-internal component names in evidence source strings were replaced with neutral labels; no values, ids or citations changed
-
-sources use `chain index sql` and `quotum record spec v1`. ownership-refusal questions refer to the authors, attribution notes use account wording, and answer prose uses neutral account or specification wording. the local path appeared only in discarded provider diagnostics. the public metric name `seated_tier2` remains in requested fields, evidence, values and citation ids to preserve the benchmark contract. `prompts.jsonl` includes the complete frozen evidence; no separate retrieval file is needed. gold is unchanged.
+evidence source labels were renamed to neutral names (`chain index sql`, `quotum record spec v1`), and a few wordings in questions, notes and answer prose were made neutral. no value, id, citation, status or gold row changed, and rescoring is byte-identical. the metric name `seated_tier2` is kept because it is part of the citation ids. `prompts.jsonl` holds the complete frozen evidence; there is no separate retrieval file.
 
 run from the repository root:
 
