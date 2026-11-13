@@ -21,7 +21,9 @@ import math
 import os
 from pathlib import Path
 import re
+import socket
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -75,6 +77,58 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
+class ResponseDeadline:
+    """Interrupt header and body reads even while a peer keeps sending bytes."""
+    def __init__(self, timeout):
+        self.expires = time.monotonic() + timeout
+        self.timer = None
+        self.expired = threading.Event()
+
+    def connection(self, base):
+        deadline = self
+
+        class Connection(base):
+            def getresponse(self):
+                sock = self.sock
+
+                def interrupt():
+                    deadline.expired.set()
+                    try:
+                        sock.shutdown(socket.SHUT_RDWR)
+                    except OSError:
+                        pass
+
+                deadline.timer = threading.Timer(max(0, deadline.expires - time.monotonic()), interrupt)
+                deadline.timer.daemon = True
+                deadline.timer.start()
+                return super().getresponse()
+
+        return Connection
+
+    def close(self):
+        if self.timer is not None:
+            self.timer.cancel()
+            self.timer.join()
+
+
+class DeadlineHTTPHandler(urllib.request.HTTPHandler):
+    def __init__(self, deadline):
+        super().__init__()
+        self.deadline = deadline
+
+    def http_open(self, req):
+        return self.do_open(self.deadline.connection(http.client.HTTPConnection), req)
+
+
+class DeadlineHTTPSHandler(urllib.request.HTTPSHandler):
+    def __init__(self, deadline):
+        super().__init__()
+        self.deadline = deadline
+
+    def https_open(self, req):
+        return self.do_open(self.deadline.connection(http.client.HTTPSConnection), req, context=self._context)
+
+
 class SecretInResponse(ValueError):
     pass
 
@@ -83,7 +137,7 @@ def contains_secret(text, secrets):
     return any(secret in text for secret in secrets)
 
 
-def request_answer(opener, url, model, prompt, key, temperature, max_tokens, timeout, retries):
+def request_answer(url, model, prompt, key, temperature, max_tokens, timeout, retries):
     payload = json.dumps({'model': model, 'messages': [{'role': 'user', 'content': prompt}],
                           'temperature': temperature, 'max_tokens': max_tokens}).encode()
     headers = {'Content-Type': 'application/json'}
@@ -99,9 +153,13 @@ def request_answer(opener, url, model, prompt, key, temperature, max_tokens, tim
     answer = None
     for attempt in range(retries + 1):
         request = urllib.request.Request(url, data=payload, headers=headers, method='POST')
+        deadline = ResponseDeadline(timeout)
         try:
+            opener = urllib.request.build_opener(NoRedirect(), DeadlineHTTPHandler(deadline), DeadlineHTTPSHandler(deadline))
             with opener.open(request, timeout=timeout) as response:
                 body = response.read(MAX_RESPONSE_BYTES + 1)
+            if deadline.expired.is_set():
+                raise TimeoutError()
             if len(body) > MAX_RESPONSE_BYTES:
                 error = 'response_too_large'
                 break
@@ -116,6 +174,8 @@ def request_answer(opener, url, model, prompt, key, temperature, max_tokens, tim
             if not isinstance(choice, dict) or not isinstance(choice.get('message'), dict) or not isinstance(choice['message'].get('content'), str):
                 raise ValueError('invalid response message')
             candidate_finish = choice.get('finish_reason')
+            if isinstance(candidate_finish, str):
+                candidate_finish.encode('utf-8')
             finish_reason = candidate_finish if isinstance(candidate_finish, str) else None
             supplied_usage = envelope.get('usage')
             if isinstance(supplied_usage, dict):
@@ -124,6 +184,8 @@ def request_answer(opener, url, model, prompt, key, temperature, max_tokens, tim
                     if isinstance(value, int) and not isinstance(value, bool) and value >= 0:
                         usage[name] = value
             answer = parse(choice['message']['content'])
+            # JSON escapes may decode to lone surrogates that cannot be saved.
+            json.dumps({'answer': answer, 'finish_reason': finish_reason}, ensure_ascii=False).encode('utf-8')
             if not isinstance(answer, dict):
                 error = 'invalid_answer'
             else:
@@ -141,9 +203,12 @@ def request_answer(opener, url, model, prompt, key, temperature, max_tokens, tim
             error = 'request_failed'
             if attempt == retries:
                 break
-        except (ValueError, TypeError, KeyError, IndexError, UnicodeError):
+        except (ValueError, TypeError, KeyError, IndexError, UnicodeError, RecursionError):
+            answer = None
             error = 'invalid_json'
             break
+        finally:
+            deadline.close()
         if attempt < retries:
             time.sleep(min(0.25 * 2 ** attempt, 2.0))
     result = {'latency_s': time.perf_counter() - started, 'finish_reason': finish_reason, **usage}
@@ -195,10 +260,9 @@ def run(args):
     if key and key in json.dumps(metadata, ensure_ascii=False):
         raise ValueError('API key must not appear in run metadata')
     meta_path.write_text(json.dumps(metadata, indent=2) + '\n')
-    opener = urllib.request.build_opener(NoRedirect())
     with out.open('a', encoding='utf-8') as stream:
         for prompt in pending:
-            result = request_answer(opener, url, args.model, prompt['prompt'], key,
+            result = request_answer(url, args.model, prompt['prompt'], key,
                                     args.temperature, args.max_tokens, args.timeout, args.retries)
             row = {'id': prompt['id'], **result}
             # A final serialization guard also catches escaped secrets.

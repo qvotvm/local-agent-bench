@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import threading
+import time
 import unittest
 from unittest.mock import patch
 
@@ -41,6 +42,23 @@ class RunnerTests(unittest.TestCase):
             def do_POST(self):
                 payload = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
                 owner.requests.append({'path': self.path, 'headers': dict(self.headers), 'payload': payload})
+                if getattr(owner, 'trickle', None):
+                    try:
+                        if owner.trickle == 'headers':
+                            content = b'HTTP/1.1 200 OK\r\nX-Slow: ' + b'x' * 100
+                        else:
+                            self.send_response(200)
+                            if owner.trickle == 'chunked':
+                                self.send_header('Transfer-Encoding', 'chunked')
+                            self.end_headers()
+                            content = b'F' * 100 if owner.trickle == 'chunked' else b' ' * 100
+                        for byte in content:
+                            self.wfile.write(bytes([byte]))
+                            self.wfile.flush()
+                            time.sleep(0.02)
+                    except OSError:
+                        pass
+                    return
                 item = owner.responses.pop(0) if owner.responses else json.dumps(ANSWER)
                 if isinstance(item, tuple):
                     code, content = item
@@ -49,6 +67,8 @@ class RunnerTests(unittest.TestCase):
                                                      'usage': {'prompt_tokens': 12, 'completion_tokens': 9}})
                 body = content.encode()
                 self.send_response(code)
+                if 300 <= code < 400:
+                    self.send_header('Location', owner.base_url + '/redirected')
                 self.send_header('Content-Type', 'application/json')
                 self.send_header('Content-Length', str(len(body)))
                 self.end_headers()
@@ -103,6 +123,36 @@ class RunnerTests(unittest.TestCase):
     def test_invalid_response_envelope(self):
         self.responses = [(200, '{broken envelope')]
         self.assertEqual(self.invoke()[0][0]['error'], 'invalid_json')
+
+    def test_deep_json_does_not_abort_later_prompts(self):
+        nested = '[' * 20000 + '0' + ']' * 20000
+        for content in (nested, json.dumps({'choices': [{'message': {'content': nested}}]})):
+            with self.subTest(envelope=content == nested):
+                self.out.unlink(missing_ok=True)
+                self.responses = [(200, content)]
+                rows, _ = self.invoke('--limit', '2')
+                self.assertEqual(rows[0]['error'], 'invalid_json')
+                self.assertEqual(rows[1]['answer'], ANSWER)
+
+    def test_surrogate_json_is_an_error_row(self):
+        self.responses = [json.dumps(dict(ANSWER, text='\ud800'))]
+        rows, _ = self.invoke('--limit', '2')
+        self.assertEqual(rows[0]['error'], 'invalid_json')
+        self.assertEqual(rows[1]['answer'], ANSWER)
+
+    def test_response_size_limit(self):
+        self.responses = [(200, ' ' * (run.MAX_RESPONSE_BYTES + 1))]
+        self.assertEqual(self.invoke()[0][0]['error'], 'response_too_large')
+
+    def test_trickled_headers_body_and_chunk_framing_obey_deadline(self):
+        for kind in ('headers', 'body', 'chunked'):
+            with self.subTest(kind=kind):
+                self.out.unlink(missing_ok=True)
+                self.trickle = kind
+                started = time.monotonic()
+                rows, _ = self.invoke('--timeout', '0.15', '--retries', '0')
+                self.assertEqual(rows[0]['error'], 'request_failed')
+                self.assertLess(time.monotonic() - started, 1.0)
 
     def test_malformed_envelope_structure(self):
         self.responses = [(200, json.dumps({'choices': ['invalid choice']}))]
@@ -202,6 +252,31 @@ class RunnerTests(unittest.TestCase):
     def test_redirect_not_followed(self):
         # Exercise the redirect handler directly, without a second destination.
         self.assertIsNone(run.NoRedirect().redirect_request(None, None, 302, '', {}, 'http://example.invalid'))
+
+    def test_http_redirects_do_not_send_a_second_request(self):
+        for code in (301, 302, 303, 307, 308):
+            with self.subTest(code=code):
+                self.out.unlink(missing_ok=True)
+                self.responses = [(code, 'redirect body')]
+                count = len(self.requests)
+                rows, _ = self.invoke()
+                self.assertEqual(rows[0]['error'], f'http_{code}')
+                self.assertEqual(len(self.requests), count + 1)
+
+    def test_summary_confines_crafted_model_names(self):
+        self.invoke()
+        Path(str(self.out) + '.meta.json').unlink()
+        fake_root = self.directory / 'benchmark'
+        shutil.copytree(ROOT / 'data', fake_root / 'data')
+        (fake_root / 'scorer').mkdir()
+        shutil.copyfile(ROOT / 'scorer/score.py', fake_root / 'scorer/score.py')
+        for model in ('../../escaped', '/absolute/name', '..', 'x\\..\\y', 'a/b:9b', '%2fescape'):
+            with self.subTest(model=model), patch.object(run, 'ROOT', fake_root), redirect_stdout(io.StringIO()):
+                self.assertEqual(run.main(['--summarize', str(self.out), '--model', model,
+                                           '--hardware', 'test', '--quant', 'test', '--runtime', 'test']), 0)
+                destination = fake_root / 'results/community' / (run.slug(model) + '.json')
+                self.assertEqual(destination.resolve().parent, (fake_root / 'results/community').resolve())
+                self.assertEqual(json.loads(destination.read_text())['model'], model)
 
     def test_summary_schema_hashes_slug_and_settings(self):
         self.invoke('--temperature', '0.3', '--max-tokens', '37')
