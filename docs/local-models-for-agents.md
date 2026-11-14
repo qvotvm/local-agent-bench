@@ -87,7 +87,7 @@ These results suggest keeping numbers, citations and limits in deterministic too
 
 ## Code and data
 
-The v0.1 package contains the scorer, saved per-group results, methodology and a list of contested scoring decisions. The 200 tasks, gold answers, frozen retrieval contexts and both models' saved answers are planned for v0.2 after a privacy pass. Repository URL for the package: https://github.com/qvotvm/local-agent-bench.
+The v0.1 package contains the scorer, saved per-group results, methodology and a list of contested scoring decisions. The 200 tasks, gold answers, frozen retrieval contexts and both models' saved answers were added in v0.2 after a privacy pass, together with a runner for other models (`scorer/run.py`). Repository URL for the package: https://github.com/qvotvm/local-agent-bench.
 
 ## Sources
 
