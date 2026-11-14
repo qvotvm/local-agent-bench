@@ -3,8 +3,8 @@ message: "if you use this benchmark, please cite it as below."
 title: "local-agent-bench: a 200-task Robinhood Chain benchmark, stock Qwen3-8B local vs Claude Opus 5.5"
 authors:
   - name: quotum
-version: 0.1.0
-date-released: 2026-11-13
+version: 0.2.0
+date-released: 2026-11-14
 url: "https://github.com/qvotvm/local-agent-bench"
 repository-code: "https://github.com/qvotvm/local-agent-bench"
 license: MIT
